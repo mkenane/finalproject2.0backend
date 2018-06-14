@@ -1,0 +1,2 @@
+class Categoryingredient < ApplicationRecord
+end
