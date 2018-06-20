@@ -1,38 +1,57 @@
-rice = Ingredient.create(name: "rice", serving_size: 2, calories_per_serving: 200, )
-bread = Ingredient.create(name: "bread", serving_size: 2, calories_per_serving: 200)
-pork = Ingredient.create(name: "pork", serving_size: 2, calories_per_serving: 200)
-cheese = Ingredient.create(name: "cheese", serving_size: 2, calories_per_serving: 200)
-quinoa = Ingredient.create(name: "quinoa", serving_size: 2, calories_per_serving: 200)
-chicken = Ingredient.create(name: "chicken", serving_size: 2, calories_per_serving: 200)
-tofu = Ingredient.create(name: "tofu", serving_size: 2, calories_per_serving: 200)
-glutenFreeBread = Ingredient.create(name: "glutenFreeBread", serving_size: 2, calories_per_serving: 200)
 
-ricetoquinoa = Relationship.create(name: "ricetoquinoa", ingredient_id: 1, replacement_ingredient_id: 9)
+# #
+# arrayofingridkosherdairy = ["milk", "cheese", "yogurt"]
+# # arrayofingridkoshermeat = []
+# # arrayofingridkoshergluten = []
+# # arrayofingridhighscalories = []
+# arrayofmeasures = ["teaspoons", "cups", "tablespoons", "pint", "quarts", "ounces"]
+#
+# arrayofingridkosherdairy.each do |ingrid|
+#   Ingredient.create(name: ingrid, serving_measure: arrayofmeasures.sample, quantity: Random.rand(5), calories_per_serving: Random.rand(1000), kosher: true, dairy: true, gluten: false, meat: false, animalproduct: true)
+#   end
+
+
+
+
+
+rice = Ingredient.create(name: "rice",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+bread = Ingredient.create(name: "bread",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+pork = Ingredient.create(name: "pork",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+cheese = Ingredient.create(name: "cheese",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+quinoa = Ingredient.create(name: "quinoa",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+chicken = Ingredient.create(name: "chicken", calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+tofu = Ingredient.create(name: "tofu", calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+glutenFreeBread = Ingredient.create(name: "glutenFreeBread", calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+pasta = Ingredient.create(name: "pasta", calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+flour = Ingredient.create(name: "flour", calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+egg = Ingredient.create(name: "egg",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+rye = Ingredient.create(name: "rye",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+barley = Ingredient.create(name: "barley",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+soy = Ingredient.create(name: "soy",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+potatoes = Ingredient.create(name: "potatoes",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+beans = Ingredient.create(name: "beans",  calories_per_serving: 200, serving_measure: "cups", quantity: 0)
+
+
+
 chickentotofu =  Relationship.create(name: "chickentotofu", ingredient_id: 10, replacement_ingredient_id: 11)
 breadtoglutenfreebread = Relationship.create(name: "breadtoGlutenFreeBread", ingredient_id: 10, replacement_ingredient_id: 11)
+pastatopotato =  Relationship.create(name: "pastatopotato", ingredient_id: 9, replacement_ingredient_id: 15)
+pastatobeans = Relationship.create(name: "pastatobeans", ingredient_id: 9, replacement_ingredient_id: 16)
+cheesetotofu = Relationship.create(name: "cheesetotofu", ingredient_id: 4, replacement_ingredient_id: 11)
+porktochicken =  Relationship.create(name: "porktochicken", ingredient_id: 3, replacement_ingredient_id: 10)
 
-kosher = Category.create(name: "kosher")
-glutenfree = Category.create(name: "gluten")
+
+nonkosher = Category.create(name: "nonkosher")
 dairy = Category.create(name: "dairy")
-veg = Category.create(name: "veg")
-
-
-glutenfreebread = Categoryingredient.create(name: "glutenfreebread", ingredient_id: 8, category_id: 2)
-quinoa = Categoryingredient.create(name: "quinoa", ingredient_id: 5, category_id: 2)
-
+meat = Category.create(name: "veg")
+gluten = Category.create(name: "gluten")
+lowcalorie = Category.create(name: "lowcalorie")
+animalproduct = Category.create(name: "animalproduct")
 
 
 
-# create_table :relationships do |t|
-#   t.string :name
-#   t.integer :ingredient_id
-#   t.integer :replacement_ingredient_id
-
-# class Ingredient < ApplicationRecord
-# has_many :recipeingredients
-# has_many :recipes, through: :recipeingredients
-# has_many :relationships
-# has_many :replacing_relationships, class_name: "Relationship", foreign_key: "replacement_ingredient_id"
-# has_many :replacement_ingredients, through: :relationships
-# has_many :ingredients, through: :replacing_relationships
-# end
+glutenflour = Categoryingredient.create(name: "glutenflour", ingredient_id: 10, category_id: 4)
+glutenpasta = Categoryingredient.create(name: "glutenpasta", ingredient_id: 9, category_id: 4)
+glutenbarley = Categoryingredient.create(name: "glutenbarley", ingredient_id: 13, category_id: 4)
+dairycheese =  Categoryingredient.create(name: "dairycheese", ingredient_id: 4, category_id: 2)
+nonkosherpork = Categoryingredient.create(name: "nonkosherpork", ingredient_id: 3, category_id: 1)

@@ -31,11 +31,14 @@ ActiveRecord::Schema.define(version: 20180614181425) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.integer "serving_size"
+    t.string "serving_measure"
+    t.integer "quantity"
     t.integer "calories_per_serving"
     t.boolean "kosher"
     t.boolean "dairy"
     t.boolean "gluten"
+    t.boolean "meat"
+    t.boolean "animalproduct"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
