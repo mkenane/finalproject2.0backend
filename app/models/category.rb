@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_many :categoryingredients
-  has_many :ingredients, through: :categoryingredients
+  has_many :ingredientcategories
+  has_many :ingredients, through: :ingredientcategories
 
 end

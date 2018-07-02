@@ -5,6 +5,6 @@ has_many :relationships
 has_many :replacing_relationships, class_name: "Relationship", foreign_key: "replacement_ingredient_id"
 has_many :replacement_ingredients, through: :relationships
 has_many :ingredients, through: :replacing_relationships
-has_many :categoryingredients
-has_many :ingredients, through: :categoryingredients 
+has_many :ingredientcategories
+has_many :ingredients, through: :ingredientcategories 
 end

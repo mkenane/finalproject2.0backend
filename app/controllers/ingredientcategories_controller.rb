@@ -1,8 +1,8 @@
-class CategoryingredientsController < ApplicationController
+class IngredientcategoriesController < ApplicationController
 
   def index
     @manualCategoryingrids = []
-Categoryingredient.all.each {|cating|
+Ingredientcategory.all.each {|cating|
       @manualCategoryingrids << {id: cating.id, name: cating.name, ingredient_id: cating.ingredient_id, ingredient: Ingredient.find(cating.ingredient_id), category_id: cating.category_id}
   }
 

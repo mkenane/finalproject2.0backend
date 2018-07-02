@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :categoryingredients, only: [:index, :show, :new, :create, :edit, :update]
+  resources :ingredientcategories, only: [:index, :show, :new, :create, :edit, :update]
   resources :categories
   resources :recipeingredients
   resources :recipes
