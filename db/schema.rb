@@ -17,44 +17,38 @@ ActiveRecord::Schema.define(version: 20180614181425) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+
   end
 
   create_table "ingredientcategories", force: :cascade do |t|
     t.string "name"
     t.integer "ingredient_id"
     t.integer "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+
   end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+
   end
 
   create_table "recipeingredients", force: :cascade do |t|
     t.string "name"
     t.integer "ingredient_id"
     t.integer "recipe_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+
   end
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+
   end
 
   create_table "relationships", force: :cascade do |t|
     t.string "name"
     t.integer "ingredient_id"
     t.integer "replacement_ingredient_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+
   end
 
 end

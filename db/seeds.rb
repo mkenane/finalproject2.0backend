@@ -364,7 +364,8 @@ dairy_ingredients = ["Brie",
 "Cottage cheese",
 "Cream",
 "Cream cheese",
-"Curd cheese"]
+"Curd cheese",
+"Greek yogurt"]
 
 high_calorie_ingredients = ["Argan oil",
 "Avocado",
